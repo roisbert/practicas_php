@@ -34,7 +34,7 @@
             <th>Nombre y apellido</th>
             <td><?php echo $nombre; ?></td>
         </tr>
-        <tr>
+        <tr>/**/ */
             <th>Edad</th>
             <td><?php echo $edad; ?></td>
         </tr>
