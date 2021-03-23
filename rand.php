@@ -8,4 +8,9 @@ $valor = rand(1,5);
         echo "el numero $valor es par";
     }
     
+    if($valor % 2 == 1){
+        echo "el numero $valor es impar";
+    }else{
+        echo "el numero $valor es par";
+    }
 ?>
