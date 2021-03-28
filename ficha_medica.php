@@ -1,10 +1,12 @@
-<?php 
-    $fecha = date("d/m/Y");
-    $edad = 20;
-    $nombre = "Roisbert Almenara";
-    $aPeliculas = array("Interestelar",
-                        "El efecto mariposa",
-                        "Son como niños.");
+<?php
+$fecha = date("d/m/Y");
+$edad = 20;
+$nombre = "Roisbert Almenara";
+$aPeliculas = array(
+    "Interestelar",
+    "El efecto mariposa",
+    "Son como niños."
+);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,33 +27,33 @@
                 <h1>Ficha médica</h1>
             </div>
             <div class="col-12">
-            <table class="table table-hover">
-        <tr>
-            <th>fecha</th>
-            <td><?php echo $fecha; ?></td>
-        </tr>
-        <tr>
-            <th>Nombre y apellido</th>
-            <td><?php echo $nombre; ?></td>
-        </tr>
-        <tr>
-            <th>Edad</th>
-            <td><?php echo $edad; ?></td>
-        </tr>
-        <tr>
-            <th>Películas Favoritas</th>
-            <td><?php
-                    for($i = 0; $i < count($aPeliculas); $i++){
-                        echo $aPeliculas[$i] . "<br>";
-                    }
-                    foreach($aPeliculas as $item){
-                        echo $item . "<br>";
-                    }
-                    
-                ?>
-            </td>
-        </tr>
-    </table>
+                <table class="table table-hover">
+                    <tr>
+                        <th>fecha</th>
+                        <td><?php echo $fecha; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nombre y apellido</th>
+                        <td><?php echo $nombre; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Edad</th>
+                        <td><?php echo $edad; ?></td>
+                    </tr>
+                    <tr>
+                        <th>Películas Favoritas</th>
+                        <td><?php
+                               /* for($i = 0;$i < count($aPeliculas); $i++){
+                                    echo $aPeliculas[$i] . "<br>";
+                                }*/
+                                foreach($aPeliculas as $pelicula){
+                                    echo $pelicula . "<br>";
+                                }
+
+                            ?>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

@@ -70,7 +70,9 @@ $aProductos[] = array(
                             } else {
                                 echo "No hay stock";
                             }
-                            ?></td>
+                            ?>
+                            echo $aProductos[$i]["stock"] > 10? "hay stock" : ($aProductos[0]["stock"] <= 10 && $aProductos[0]["stock"] > 0)? "stock critico" : "no hay";
+                            </td>
                         <td><?php echo $aProductos[0]["precio"] ?></td>
                         <td><button class="btn-primary">Acciones</button></td>
                     </tr>
