@@ -8,10 +8,12 @@
                          
     );
     $aEmpleados[] = array(
-                        "dni" => "95870424",
-                        "nombre" => "Daniela Garcia",
-                        "sueldo" => 70000
+                          "dni" => "95825511",
+                          "nombre" => "Roisbert Almenara",
+                          "sueldo" => 30000
+                         
     );
+    
     $aEmpleados[] = array(
                           "dni" => "27295873",
                           "nombre" => "Roiner Almenara",
@@ -32,7 +34,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -52,7 +54,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-               <table class="table table-hover">
+               <table class="table table-hover border">
                     <tr>
                         <th>DNi</th>
                         <th>Nombre y Apellido</th>
@@ -62,8 +64,8 @@
                     <tr>
                     
                         <td><?php echo $empleado["dni"]; ?></td>
-                        <td><?php echo $empleado["nombre"]; ?></td>
-                        <td><?php echo sueldoNeto($empleado["sueldo"]); ?></td> 
+                        <td><?php echo mb_strtoupper($empleado["nombre"]); ?></td>
+                        <td>$<?php echo sueldoNeto($empleado["sueldo"]); ?></td> 
                         
                     </tr>
                     <?php }?>
