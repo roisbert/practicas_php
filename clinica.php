@@ -5,28 +5,28 @@ $aPacientes[] = array(
     "dni" => "30157162",
     "nombre" => "Juan García",
     "edad" => 17,
-    "peso" => 50,
+    "peso" => 50
 );
 
 $aPacientes[] = array(
     "dni" => "10010586",
     "nombre" => "Yuleida Bonilla",
     "edad" => 46,
-    "peso" => 65,
+    "peso" => 65
 );
 
 $aPacientes[] = array(
     "dni" => "14331333",
     "nombre" => "Jarold García",
     "edad" => 44,
-    "peso" => 80,
+    "peso" => 80
 );
 
 $aPacientes[] = array(
     "dni" => "3792749",
     "nombre" => "Carmen Sanchez",
     "edad" => 70,
-    "peso" => 55,
+    "peso" => 55
 );
 
 ?>
@@ -51,7 +51,7 @@ $aPacientes[] = array(
         </div>
         <div class="row">
             <div class="col-12">
-                <table class="table table-hover">
+                <table class="table table-hover border">
                     <tr>
                         <th>DNI</th>
                         <th>Nombre y Apellido</th>
@@ -60,11 +60,18 @@ $aPacientes[] = array(
                     </tr>
                     <?php foreach ($aPacientes as $paciente) {    ?>
                         <tr>
-
-                            <td><?php echo $paciente["dni"] . "<br>"; ?></td>
-                            <td><?php echo $paciente["nombre"] . "<br>"; ?></td>
-                            <td><?php echo $paciente["edad"] . "<br>"; ?></td>
-                            <td><?php echo $paciente["peso"] . "<br>"; ?></td>
+                            <td><?php echo $paciente["dni"]; ?></td>
+                            <td><?php echo $paciente["nombre"]; ?></td>
+                            <td><?php echo $paciente["edad"]; ?></td>
+                            <td><?php echo $paciente["peso"]; ?></td>
+                        </tr>
+                    <?php  } ?>
+                    <?php for($i = 0; $i < count($aPacientes); $i++) {    ?>
+                        <tr>
+                            <td><?php echo $aPacientes[$i]["dni"]; ?></td>
+                            <td><?php echo $aPacientes[$i]["nombre"]; ?></td>
+                            <td><?php echo $aPacientes[$i]["edad"]; ?></td>
+                            <td><?php echo $aPacientes[$i]["peso"]; ?></td>
                         </tr>
                     <?php  } ?>
                 </table>
