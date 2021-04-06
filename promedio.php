@@ -10,5 +10,5 @@
         }
         return $suma / $cantidad;
     }
-    echo "El promedio es " . promediar($aNumeros);
+    echo promediar($aNumeros);
 ?>
