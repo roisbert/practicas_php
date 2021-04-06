@@ -34,7 +34,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,13 @@
                     <tr>
                     
                         <td><?php echo $empleado["dni"]; ?></td>
+<<<<<<< HEAD
                         <td><?php echo strtoupper($empleado["nombre"]); ?></td>
                         <td><?php echo sueldoNeto($empleado["sueldo"]); ?></td> 
+=======
+                        <td><?php echo mb_strtoupper($empleado["nombre"]); ?></td>
+                        <td>$<?php echo sueldoNeto($empleado["sueldo"]); ?></td> 
+>>>>>>> e9fcb565f63e127cb15342635d79e65a77ebe411
                         
                     </tr>
                     <?php }?>
