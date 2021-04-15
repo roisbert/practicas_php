@@ -10,5 +10,5 @@
         }
         return $suma / $cantidad;
     }
-    echo promediar($aNumeros);
+    echo number_format(promediar($aNumeros), 2 , ",", ".");
 ?>
