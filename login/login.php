@@ -1,4 +1,18 @@
 <?php
+session_start();
+$claveEncriptada = '$2y$10$zqIdBOL2cw60q/Te1uSdu.godURopxlu.e/l7IqeiGBbmo7nmhOY6';
+
+
+if($_POST){
+  $usuario = trim($_POST["txtUsuario"]);
+  $contraseña = trim($_POST["txtClave"]);
+   if(isset($usuario) && $usuario == "admin" && password_verify($contraseña, $claveEncriptada)){
+    $_SESSION["usuario"] = "Bienvenido Roisbert";
+    header("location:index.php");
+   }else{
+     $msg = "Credenciales incorrectas";
+   }
+}
 
 
 
@@ -52,7 +66,7 @@
 					</div>
 				  <?php endif; ?>
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="txtUsuario" name="txtUsuario" aria-describedby="emailHelp" placeholder="Usuario" value="ntarche">
+                      <input type="text" class="form-control form-control-user" id="txtUsuario" name="txtUsuario" aria-describedby="emailHelp" placeholder="Usuario" value="admin">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="txtClave" name="txtClave" placeholder="Clave" value="admin123">

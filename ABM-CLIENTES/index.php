@@ -32,7 +32,7 @@ if ($_POST) {
     if ($id != "") {
         //creo un array con los datos del cliente a editar y se actualiza
         if ($_FILES["archivo"]["error"] !== UPLOAD_ERR_OK) {
-            $nuevoNombre = $aClientes[$id]["imagenes"];
+            $nuevoNombre = $aClientes[$id]["imagen"];
         } else {
             if (file_exists("imagenes/" . $aClientes[$id]["imagenes"])) {
                 unlink("imagenes/" . $aClientes[$id]["imagenes"]);
